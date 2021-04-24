@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ListItem from "./ListItem";
 
 /*
  _ Render a list of items
@@ -17,9 +18,7 @@ function List(props) {
   return (
     <ul className="list-items">
       {items.map((item) => (
-        <li key={item} className="item">
-          {item}
-        </li>
+        <ListItem key={item} item={item} />
       ))}
     </ul>
   );
